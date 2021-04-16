@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<script defer src="index_bundle.js"></script></head>
+<body>
+<div class="content">
+    <div class="left-side">
+        <h2>FTL: Прямая машина</h2>
+        <form>
+            <div class="form-fields">
+                <div class="form-fields__paragraph">
+                    <div class="form-fields__paragraph-icon">1</div>
+                    <p class="form-fields__paragraph-text">Маршрут</p>
+                </div>
+                <div class="form-fields__item">
+                    <p class="form-fields__item-name">Откуда</p>
+                    <label class="form-fields__item-field">
+                        <input class="item-field__input">
+                    </label>
+                </div>
+                <div class="form-fields__item">
+                    <p class="form-fields__item-name">Куда</p>
+                    <label class="form-fields__item-field">
+                        <input class="item-field__input">
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-fields">
+                <div class="form-fields__paragraph">
+                    <div class="form-fields__paragraph-icon">2</div>
+                    <p class="form-fields__paragraph-text">Транспорт</p>
+                </div>
+                <div class="form-fields__flex-container flex-container__row __half-with __desktop">
+                    <div class="form-fields__item">
+                        <p class="form-fields__item-name">Грузоподёмность</p>
+                        <label class="form-fields__item-field">
+                            <select class="item-field__select">
+                                <option disabled selected value="0">Не выбрано</option>
+                                <option value="">Вариант 1</option>
+                                <option value="">Вариант 2</option>
+                                <option value="">Вариант 3</option>
+                                <option value="">Вариант 4</option>
+                                <option value="">Вариант 5</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-fields__item">
+                        <p class="form-fields__item-name">Способ погрузки</p>
+                        <label class="form-fields__item-field">
+                            <select class="item-field__select">
+                                <option disabled selected value="0">Не выбрано</option>
+                                <option value="">Вариант 1</option>
+                                <option value="">Вариант 2</option>
+                                <option value="">Вариант 3</option>
+                                <option value="">Вариант 4</option>
+                                <option value="">Вариант 5</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-fields">
+                <div class="form-fields__paragraph">
+                    <div class="form-fields__paragraph-icon">3</div>
+                    <p class="form-fields__paragraph-text">Груз</p>
+                </div>
+                <div class="form-fields__item __half-with __desktop">
+                    <p class="form-fields__item-name">Тип груза</p>
+                    <label class="form-fields__item-field">
+                        <select class="item-field__select">
+                            <option disabled selected value="0">Не выбрано</option>
+                            <option value="">Вариант 1</option>
+                            <option value="">Вариант 2</option>
+                            <option value="">Вариант 3</option>
+                            <option value="">Вариант 4</option>
+                            <option value="">Вариант 5</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-fields__flex-container flex-container__row __half-with __desktop">
+                    <div class="form-fields__item">
+                        <p class="form-fields__item-name">Класс опасности</p>
+                        <label class="form-fields__item-field">
+                            <select class="item-field__select">
+                                <option disabled selected value="0">Не выбрано</option>
+                                <option value="">Вариант 1</option>
+                                <option value="">Вариант 2</option>
+                                <option value="">Вариант 3</option>
+                                <option value="">Вариант 4</option>
+                                <option value="">Вариант 5</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-fields__item">
+                        <p class="form-fields__item-name">Объявленная ценость,₽</p>
+                        <label class="form-fields__item-field">
+                            <input placeholder="> 1" class="item-field__input">
+                        </label>
+                    </div>
+                </div>
+                <div class="form-fields__item form-fields__flex-container __align-center">
+                    <label class="form-fields__item-field __checkbox">
+                        <input class="item-field__checkbox" type="checkbox" id="temperature-container__trigger">
+                        <span>✔</span>
+                    </label>
+                    <span class="form-fields__item__checkbox__label">Требуется температурный режим</span>
+                </div>
+            </div>
+
+            <div id="temperature-container" class="form-fields hidden">
+                <div class="form-fields__flex-container flex-container__row __half-with __desktop">
+                    <div class="form-fields__item">
+                        <p class="form-fields__item-name">От, °C</p>
+                        <label class="form-fields__item-field">
+                            <input placeholder="-20" class="item-field__input">
+                        </label>
+                    </div>
+                    <div class="form-fields__item">
+                        <p class="form-fields__item-name">До, °C</p>
+                        <label class="form-fields__item-field">
+                            <input placeholder="+23" class="item-field__input">
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-fields">
+                <div class="form-fields__paragraph">
+                    <div class="form-fields__paragraph-icon">4</div>
+                    <p class="form-fields__paragraph-text">Время</p>
+                </div>
+                <div class="form-fields__item">
+                    <div class="form-fields__item-names__container">
+                        <p class="form-fields__item-name">Когда прибыть на точку</p>
+                        <p class="form-fields__item-name">700 км в день</p>
+                    </div>
+                    <div class="item__navigation__point">
+                        <div class="navigation__point__address">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM12 8C12 10.2091 10.2091 12 8 12C5.79086 12 4 10.2091 4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8Z" fill="#EF483E"/>
+                            </svg>
+                            <p>Адрес не указан</p>
+                        </div>
+                        <div class="navigation__point__button-chosen">
+                            <p class="form-fields__item-name">НЕ ВЫБРАНО</p>
+                        </div>
+                    </div>
+                    <div class="item__navigation__point">
+                        <div class="navigation__point__address">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM12 8C12 10.2091 10.2091 12 8 12C5.79086 12 4 10.2091 4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8Z" fill="white"/>
+                            </svg>
+                            <p>Адрес не указан</p>
+                        </div>
+                        <div class="navigation__point__button-chosen">
+                            <p class="form-fields__item-name">НЕ ВЫБРАНО</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-fields">
+                <div class="form-fields__item form-fields__comment">
+                    <p class="form-fields__item-name">Комментарий к заказу</p>
+                    <textarea placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="right-side">
+        <div class="right-side__text">
+            Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
